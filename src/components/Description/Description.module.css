@@ -1,0 +1,17 @@
+.reviews-title {
+  font-weight: 500;
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.reviews-descr {
+  margin: 0 auto;
+  max-width: 600px;
+  font-weight: 300;
+  font-size: 20px;
+  text-align: center;
+  color: grey;
+
+  margin-bottom: 30px;
+}
