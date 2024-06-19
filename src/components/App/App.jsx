@@ -7,14 +7,16 @@ import Feedback from "../Feedback/Feedback";
 import Notification from "../Notification/Notification";
 
 const App = () => {
-  const storedFeedback = JSON.parse(localStorage.getItem("feedback"));
-  const [feedback, setFeedback] = useState(
-    storedFeedback || {
-      good: 0,
-      neutral: 0,
-      bad: 0,
-    }
-  );
+  const [feedback, setFeedback] = useState(() => {
+    const storedFeedback = JSON.parse(localStorage.getItem("feedback"));
+    return (
+      storedFeedback || {
+        good: 0,
+        neutral: 0,
+        bad: 0,
+      }
+    );
+  });
 
   const updateFeedback = (feedbackType) => {
     setFeedback({
